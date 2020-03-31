@@ -97,7 +97,6 @@ urlpatterns = [
     url(r'^api/enrollment/v1/', include('enrollment.urls')),
 
     # Entitlement API RESTful endpoints
-    url(r'^api/entitlements/', include('entitlements.api.urls', namespace='entitlements_api')),
 
     # Courseware search endpoints
     url(r'^search/', include('search.urls')),
@@ -1055,6 +1054,6 @@ urlpatterns += [
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.LMS))
 
 # Jupyter Viewer XBlock Endpoint
-urlpatterns += (
+urlpatterns += [
     url(r'^api/jupyter/', include('xblock_jupyter_viewer.rest.urls', namespace='xblock_jupyter_viewer')),
-)
+]
