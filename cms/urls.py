@@ -280,6 +280,6 @@ from openedx.core.djangoapps.plugins import constants as plugin_constants, plugi
 urlpatterns.extend(plugin_urls.get_patterns(plugin_constants.ProjectType.CMS))
 
 # Jupyter Viewer XBlock Endpoint
-urlpatterns += (
+urlpatterns += [
     url(r'^api/jupyter/', include('xblock_jupyter_viewer.rest.urls', namespace='xblock_jupyter_viewer')),
-)
+]
