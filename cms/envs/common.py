@@ -971,7 +971,7 @@ VIDEO_UPLOAD_PIPELINE = {
 # The order of INSTALLED_APPS is important, when adding new apps here
 # remember to check that you are not creating new
 # RemovedInDjango19Warnings in the test logs.
-INSTALLED_APPS = [
+INSTALLED_APPS = [   
     # Standard apps
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -1169,6 +1169,9 @@ INSTALLED_APPS = [
     'openedx.features.course_duration_limits',
     'openedx.features.content_type_gating',
     'experiments',
+    
+     # Jupyter Notebook Viewer XBlock
+    'xblock_jupyter_viewer',
 ]
 
 
